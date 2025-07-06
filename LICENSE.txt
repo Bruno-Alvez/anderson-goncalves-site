@@ -1,0 +1,7 @@
+Copyright © Alves Developer
+
+This project was developed as part of a freelance contract. The source code is made publicly available strictly for educational and portfolio demonstration purposes.
+
+Commercial use, reproduction, redistribution, or modification of any part of this project is not permitted without prior written consent from the author or respective client.
+
+All rights reserved.
