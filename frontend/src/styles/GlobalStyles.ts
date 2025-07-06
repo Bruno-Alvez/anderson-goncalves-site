@@ -8,15 +8,22 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f9f9f9;
     color: #111;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
   }
 
   a {
     text-decoration: none;
     color: inherit;
   }
+
+  body > * {
+    margin-top: 0;
+  }
+
 `
