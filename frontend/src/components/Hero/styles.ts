@@ -6,10 +6,15 @@ interface SlideProps {
 
 export const HeroSection = styled.section`
   width: 100%;
-  height: 90vh;
+  height: 140vh;
+  padding-top: 120px;
   position: relative;
   font-family: 'Cinzel', serif;
+  z-index: 0;
+  overflow: hidden;
+  margin-bottom: 0px;
 `
+
 
 export const SliderWrapper = styled.div`
   width: 100%;
@@ -23,8 +28,8 @@ export const SliderWrapper = styled.div`
 export const Slide = styled.div<SlideProps>`
   background-image: url(${props => props.bg});
   background-size: cover;
-  background-position: center;
-  height: 90vh;
+  background-position: top center;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;

@@ -1,4 +1,3 @@
-// src/components/SocialDivider/styles.ts
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -9,7 +8,8 @@ export const Container = styled.div`
   background-color: #E6F0FF;
   padding: 0.75rem 0;
   overflow: hidden;
-  position: relative;
+  z-index:1;
+  margin-top: 0px;
 `
 
 export const Line = styled.div`
@@ -35,8 +35,4 @@ export const IconLink = styled.a`
     color: #1E3A8A;
     transform: scale(1.1);
   }
-`
-
-export const OverlapWrapper = styled.div`
-  margin-top: -320px;
 `
