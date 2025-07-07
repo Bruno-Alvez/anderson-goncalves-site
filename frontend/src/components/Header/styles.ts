@@ -12,6 +12,7 @@ export const Container = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 `
 
 export const Logo = styled.div`

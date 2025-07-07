@@ -1,8 +1,8 @@
-// src/App.tsx
 import { GlobalStyles } from './styles/GlobalStyles'
 import Header from './components/Header'
 import SocialDivider from './components/SocialDivider'
 import Hero from './components/Hero'
+import FaqSection from './components/FaqSection'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Hero />
       <SocialDivider />
+      <FaqSection />
       
     </>
   )
