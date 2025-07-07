@@ -8,6 +8,7 @@ import InitialsDivider from './components/Divider'
 import AboutSection from './components/AboutMe'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import FloatingWhatsapp from './components/FloatingWhatsapp'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <ContactForm />
       <InitialsDivider />
       <Footer />
+      <FloatingWhatsapp />
+
       
     </>
   )
