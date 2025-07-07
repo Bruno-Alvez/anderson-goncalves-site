@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E6F0FF;
+  background-color:rgb(255, 255, 255);
   padding: 0.75rem 0;
   overflow: hidden;
   z-index: 1;
@@ -24,7 +24,7 @@ export const Initials = styled.div`
   font-size: 1.4rem;
   letter-spacing: 2px;
   padding: 0 2rem;
-  background-color: #ffffff;
+  background-color:rgb(255, 255, 255);
   color: #0A192F;
   z-index: 2;
   transition: transform 0.3s ease;

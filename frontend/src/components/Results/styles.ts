@@ -75,7 +75,6 @@ export const Card = styled.div`
   }
 `
 
-// Modal
 export const ModalOverlay = styled.div`
   position: fixed;
   inset: 0;
@@ -93,8 +92,8 @@ export const ModalContent = styled.div`
   max-height: 90vh;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(255,255,255,0.1);
   }

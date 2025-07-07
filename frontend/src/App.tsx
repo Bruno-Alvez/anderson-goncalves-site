@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import FaqSection from './components/FaqSection'
 import Result from './components/Results'
 import InitialsDivider from './components/Divider'
+import AboutSection from './components/AboutMe'
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       <Hero />
       <SocialDivider />
       <FaqSection />
+      <InitialsDivider />
       <Result />
       <InitialsDivider />
+      <AboutSection />
       
     </>
   )
