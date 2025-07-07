@@ -7,6 +7,7 @@ import Result from './components/Results'
 import InitialsDivider from './components/Divider'
 import AboutSection from './components/AboutMe'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       <AboutSection />
       <InitialsDivider />
       <ContactForm />
+      <InitialsDivider />
+      <Footer />
       
     </>
   )
