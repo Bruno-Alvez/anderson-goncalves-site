@@ -6,6 +6,7 @@ import FaqSection from './components/FaqSection'
 import Result from './components/Results'
 import InitialsDivider from './components/Divider'
 import AboutSection from './components/AboutMe'
+import ContactForm from './components/ContactForm'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Result />
       <InitialsDivider />
       <AboutSection />
+      <InitialsDivider />
+      <ContactForm />
       
     </>
   )
