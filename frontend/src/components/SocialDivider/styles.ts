@@ -38,5 +38,5 @@ export const IconLink = styled.a`
 `
 
 export const OverlapWrapper = styled.div`
-  margin-top: -210px;
+  margin-top: -320px;
 `

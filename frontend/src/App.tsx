@@ -1,17 +1,17 @@
 // src/App.tsx
 import { GlobalStyles } from './styles/GlobalStyles'
 import Header from './components/Header'
-import * as S from './components/SocialDivider/styles'
 import SocialDivider from './components/SocialDivider'
+import Hero from './components/Hero'
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <Header />
-      <S.OverlapWrapper>
-        <SocialDivider />
-      </S.OverlapWrapper>
+      <Hero />
+      <SocialDivider />
+      
     </>
   )
 }
