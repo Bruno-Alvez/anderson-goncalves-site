@@ -1,4 +1,3 @@
-// src/styles/GlobalStyles.ts
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
@@ -10,8 +9,8 @@ export const GlobalStyles = createGlobalStyle`
 
   html, body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
-    color: #111;
+    background-color: #0A192F; /* fundo azul escuro padrão do projeto */
+    color: #E6F0FF; /* texto claro para contraste */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -25,5 +24,4 @@ export const GlobalStyles = createGlobalStyle`
   body > * {
     margin-top: 0;
   }
-
 `
