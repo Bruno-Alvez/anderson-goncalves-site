@@ -10,7 +10,7 @@ const questions = [
 
 const FAQSection = () => {
   return (
-    <S.Container>
+    <S.Container id='questions'>
       <S.Content>
         {questions.map((q, i) => (
           <motion.div

@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <S.Container>
       <S.Logo>
-          <a href="#">
+          <a href="#hero">
             <img src={logo} alt="Anderson Gonçalves Logo" />
           </a>
       </S.Logo>
@@ -26,16 +26,16 @@ const Header = () => {
 
       <S.Nav>
         <S.NavLink href="#about">Sobre Mim</S.NavLink>
-        <S.NavLink href="#projects">Projetos</S.NavLink>
-        <S.NavLink href="#testimonials">Depoimentos</S.NavLink>
+        <S.NavLink href="#results">Resultados</S.NavLink>
+        <S.NavLink href="#questions">Dúvidas</S.NavLink>
         <S.NavLink href="#contact">Contato</S.NavLink>
       </S.Nav>
 
       {isOpen && (
         <S.MobileMenu>
           <S.NavLink href="#about" onClick={toggleMenu}>Sobre Mim</S.NavLink>
-          <S.NavLink href="#projects" onClick={toggleMenu}>Projetos</S.NavLink>
-          <S.NavLink href="#testimonials" onClick={toggleMenu}>Depoimentos</S.NavLink>
+          <S.NavLink href="#results" onClick={toggleMenu}>Resultados</S.NavLink>
+          <S.NavLink href="#questions" onClick={toggleMenu}>Dúvidas</S.NavLink>
           <S.NavLink href="#contact" onClick={toggleMenu}>Contato</S.NavLink>
         </S.MobileMenu>
       )}

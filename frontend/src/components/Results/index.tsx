@@ -17,7 +17,7 @@ const Result = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
-    <S.Section>
+    <S.Section id='results'>
       <S.Title>Faça parte do <strong>#TeamGoncalves</strong></S.Title>
       <S.Grid>
         {results.map((item, index) => (

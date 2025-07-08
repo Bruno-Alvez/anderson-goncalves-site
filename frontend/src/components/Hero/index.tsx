@@ -25,7 +25,7 @@ const Hero = () => {
 })
 
   return (
-    <S.HeroSection>
+    <S.HeroSection id='hero'>
       <S.SliderWrapper ref={sliderRef} className="keen-slider">
         {slides.map((slide, index) => (
           <S.Slide key={index} className="keen-slider__slide" bg={slide.image}>
