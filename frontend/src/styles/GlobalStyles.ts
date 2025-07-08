@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
 
   a {
@@ -24,4 +25,8 @@ export const GlobalStyles = createGlobalStyle`
   body > * {
     margin-top: 0;
   }
+
+  section {
+  scroll-margin-top: 140px;
+}
 `

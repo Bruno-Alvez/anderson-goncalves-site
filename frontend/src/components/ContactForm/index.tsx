@@ -22,7 +22,7 @@ const ContactForm = () => {
   }
 
   return (
-    <S.Section>
+    <S.Section id='contact'>
       <S.Title>ENTRE EM CONTATO</S.Title>
       <S.Form onSubmit={handleSubmit}>
         <S.InputGroup>

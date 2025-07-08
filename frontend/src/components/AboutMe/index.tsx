@@ -2,7 +2,7 @@ import * as S from './styles'
 
 const AboutSection = () => {
   return (
-    <S.Section>
+    <S.Section id='about'>
       <S.Container>
         <S.ImageWrapper>
           <S.Image src="/images/about1.jpeg" alt="Personal Anderson Gonçalves" />
