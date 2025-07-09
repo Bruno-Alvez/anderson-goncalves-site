@@ -6,22 +6,22 @@ const Footer = () => {
     <S.Footer>
       <S.Content>
         <S.Socials>
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5512997599002?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/goncalvespersonal_?igsh=MWx4dzA5cnJmdGd5Ng==" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
-          <a href="mailto:contato@andersongoncalves.com">
+          <a href="mailto:personalgoncalves11@gmail.com">
             <FaEnvelope />
           </a>
         </S.Socials>
 
         <S.Address>
-          Avenida Exemplo, 1234 - São Paulo, SP
+         Rua Amauri Teixeira Leite, 561 - São Sebastião, SP
         </S.Address>
 
         <S.Copy>
