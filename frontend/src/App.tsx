@@ -27,8 +27,6 @@ function App() {
       <InitialsDivider />
       <Footer />
       <FloatingWhatsapp />
-
-      
     </>
   )
 }

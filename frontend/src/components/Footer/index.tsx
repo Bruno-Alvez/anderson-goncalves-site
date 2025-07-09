@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { FaInstagram, FaWhatsapp, FaFacebook, FaEnvelope } from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -11,9 +11,6 @@ const Footer = () => {
           </a>
           <a href="https://www.instagram.com/goncalvespersonal_?igsh=MWx4dzA5cnJmdGd5Ng==" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebook />
           </a>
           <a href="mailto:personalgoncalves11@gmail.com">
             <FaEnvelope />

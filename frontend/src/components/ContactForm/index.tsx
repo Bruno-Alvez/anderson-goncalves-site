@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import * as S from './styles'
+import axios from 'axios'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ const ContactForm = () => {
   })
 
   const [emailError, setEmailError] = useState('')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [statusMessage, setStatusMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -22,10 +25,27 @@ const ContactForm = () => {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!emailError) {
-      console.log(formData) // Envio para FastAPI será aqui
+    if (emailError) return
+
+    setStatus('loading')
+    setStatusMessage('Enviando mensagem...')
+
+    try {
+      const response = await axios.post(
+        'http://localhost:8000/send-email',
+        formData
+      )
+
+      if (response.status === 200) {
+        setStatus('success')
+        setStatusMessage('Mensagem enviada com sucesso!')
+        setFormData({ nome: '', sobrenome: '', email: '', telefone: '', mensagem: '' })
+      }
+    } catch (error) {
+      setStatus('error')
+      setStatusMessage('Ocorreu um erro ao enviar. Tente novamente.')
     }
   }
 
@@ -42,6 +62,7 @@ const ContactForm = () => {
               name="nome"
               placeholder="Seu nome"
               required
+              value={formData.nome}
               onChange={handleChange}
             />
           </div>
@@ -53,6 +74,7 @@ const ContactForm = () => {
               name="sobrenome"
               placeholder="Seu sobrenome"
               required
+              value={formData.sobrenome}
               onChange={handleChange}
             />
           </div>
@@ -67,6 +89,7 @@ const ContactForm = () => {
               name="email"
               placeholder="exemplo@email.com"
               required
+              value={formData.email}
               onChange={handleChange}
             />
             {emailError && <S.Error>{emailError}</S.Error>}
@@ -79,6 +102,7 @@ const ContactForm = () => {
               name="telefone"
               placeholder="(11) 99999-9999"
               required
+              value={formData.telefone}
               onChange={handleChange}
             />
           </div>
@@ -92,13 +116,20 @@ const ContactForm = () => {
             placeholder="Digite sua mensagem..."
             maxLength={300}
             required
+            value={formData.mensagem}
             onChange={handleChange}
           />
         </S.TextAreaWrapper>
 
         <S.RequiredInfo>* indica um campo obrigatório</S.RequiredInfo>
 
-        <S.Button type="submit">Enviar Mensagem</S.Button>
+        <S.Button type="submit" disabled={status === 'loading'}>
+          {status === 'loading' ? 'Enviando...' : 'Enviar Mensagem'}
+        </S.Button>
+
+        {status !== 'idle' && (
+          <S.Feedback status={status}>{statusMessage}</S.Feedback>
+        )}
       </S.Form>
     </S.Section>
   )
