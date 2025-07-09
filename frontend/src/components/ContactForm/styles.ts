@@ -1,5 +1,3 @@
-// src/components/ContactForm/styles.ts
-
 import styled from 'styled-components'
 import InputMask from 'react-input-mask'
 
@@ -131,4 +129,22 @@ export const Button = styled.button`
     background-color: #2563EB;
     cursor: pointer;
   }
+`
+
+export const Error = styled.span`
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: 0.4rem;
+`
+
+export const Required = styled.span`
+  color: #EF4444;
+  margin-right: 0.25rem;
+`
+
+export const RequiredInfo = styled.p`
+  color: #CBD5E1;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  font-style: italic;
 `

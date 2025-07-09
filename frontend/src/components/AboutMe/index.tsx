@@ -10,16 +10,13 @@ const AboutSection = () => {
         <S.TextWrapper>
           <S.Title>QUEM É O PERSONAL ANDERSON GONÇALVES?</S.Title>
            <S.Text>
-               Anderson Gonçalves é um personal trainer especializado em performance, saúde e estética. 
-               Com mais de uma década de experiência, desenvolveu um método exclusivo que une ciência do 
-               treinamento, disciplina e motivação. Ele acredita que cada corpo carrega um potencial 
-               único, e por isso seus treinos são 100% personalizados e acompanhados de perto.
-             
-               Fundador do movimento #TeamGoncalves, Anderson já transformou centenas de vidas com foco 
-               em resultados reais, duradouros e seguros. Seu compromisso vai além do treino: ele promove 
-               autoconfiança, educação corporal e estilo de vida saudável, sempre com ética, excelência e 
-               proximidade com seus alunos. Com Anderson, o treino é só o começo de uma jornada de 
-               transformação completa.
+               Me chamo Anderson Gonçalves, Personal Trainer com 5 anos de experiência, especialista em estética feminina e posturologia, além de atuar com musculação do básico ao avançado.
+
+               Moro no litoral norte de São Paulo e, ao longo da minha jornada, tive a oportunidade de transformar mais de 2 mil vidas femininas por meio de um método próprio, que une ciência do movimento, personalização e foco em resultados reais.
+
+               Tenho um olhar técnico e cuidadoso para a postura, execução e adaptação de cada exercício, respeitando a individualidade e os objetivos de cada aluna. Com isso, desenvolvi o método #teamgoncalves, que entrega resultados visíveis em até 45 dias, sem fórmulas mágicas, mas com estratégia e constância.
+
+               Acredito que o treino vai muito além do físico: é sobre autoconfiança, autocuidado e a conquista da sua melhor versão. E é exatamente isso que me move todos os dias.
             </S.Text>
         </S.TextWrapper>
       </S.Container>
