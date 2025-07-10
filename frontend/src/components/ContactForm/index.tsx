@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import * as S from './styles'
-import axios from 'axios'
+import api from '../../services/api'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    nome: '',
-    sobrenome: '',
+    first_name: '',
+    last_name: '',
     email: '',
-    telefone: '',
-    mensagem: '',
+    phone: '',
+    message: '',
   })
 
   const [emailError, setEmailError] = useState('')
@@ -33,15 +33,12 @@ const ContactForm = () => {
     setStatusMessage('Enviando mensagem...')
 
     try {
-      const response = await axios.post(
-        'http://localhost:8000/send-email',
-        formData
-      )
+      const response = await api.post('/send-email', formData)
 
       if (response.status === 200) {
         setStatus('success')
         setStatusMessage('Mensagem enviada com sucesso!')
-        setFormData({ nome: '', sobrenome: '', email: '', telefone: '', mensagem: '' })
+        setFormData({ first_name: '', last_name: '', email: '', phone: '', message: '' })
       }
     } catch (error) {
       setStatus('error')
@@ -58,11 +55,11 @@ const ContactForm = () => {
             <label htmlFor="nome"><S.Required>*</S.Required> Nome</label>
             <S.Input
               type="text"
-              id="nome"
-              name="nome"
+              id="first_name"
+              name="first_name"
               placeholder="Seu nome"
               required
-              value={formData.nome}
+              value={formData.first_name}
               onChange={handleChange}
             />
           </div>
@@ -70,11 +67,11 @@ const ContactForm = () => {
             <label htmlFor="sobrenome"><S.Required>*</S.Required> Sobrenome</label>
             <S.Input
               type="text"
-              id="sobrenome"
-              name="sobrenome"
+              id="last_name"
+              name="last_name"
               placeholder="Seu sobrenome"
               required
-              value={formData.sobrenome}
+              value={formData.last_name}
               onChange={handleChange}
             />
           </div>
@@ -98,11 +95,11 @@ const ContactForm = () => {
             <label htmlFor="telefone"><S.Required>*</S.Required> Telefone</label>
             <S.MaskedInput
               mask="(99) 99999-9999"
-              id="telefone"
-              name="telefone"
+              id="phone"
+              name="phone"
               placeholder="(11) 99999-9999"
               required
-              value={formData.telefone}
+              value={formData.phone}
               onChange={handleChange}
             />
           </div>
@@ -111,12 +108,12 @@ const ContactForm = () => {
         <S.TextAreaWrapper>
           <label htmlFor="mensagem"><S.Required>*</S.Required> Mensagem</label>
           <S.TextArea
-            id="mensagem"
-            name="mensagem"
+            id="message"
+            name="message"
             placeholder="Digite sua mensagem..."
             maxLength={300}
             required
-            value={formData.mensagem}
+            value={formData.message}
             onChange={handleChange}
           />
         </S.TextAreaWrapper>
