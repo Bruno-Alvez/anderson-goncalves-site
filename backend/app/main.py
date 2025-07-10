@@ -5,13 +5,19 @@ from .email_service import send_email
 
 app = FastAPI()
 
-@app.post("/send-email")
-def handle_email(form: ContactForm):
+@app.post(
+    "/send-email",
+    status_code=200,
+    summary="Send contact form email",
+    description="Receives the contact form data and sends an email to the site administrator."
+)
+async def send_contact_email(form_data: ContactForm):
     try:
-        send_email(form)
-        return {"message": "Email enviado com sucesso"}
+        send_email(form_data)
+        return {"message": "Email sent successfully"}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Erro ao enviar o email: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to send email: {str(e)}")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
