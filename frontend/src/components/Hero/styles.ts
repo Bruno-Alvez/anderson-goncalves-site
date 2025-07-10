@@ -13,8 +13,12 @@ export const HeroSection = styled.section`
   z-index: 0;
   overflow: hidden;
   margin-bottom: 0px;
-`
 
+  @media (max-width: 768px) {
+    height: 90vh;
+    padding-top: 100px;
+  }
+`
 
 export const SliderWrapper = styled.div`
   width: 100%;
@@ -34,6 +38,10 @@ export const Slide = styled.div<SlideProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
 `
 
 export const Overlay = styled.div`
@@ -105,6 +113,10 @@ export const ArrowLeft = styled.button`
 
   &:hover {
     color: #1E3A8A;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 
