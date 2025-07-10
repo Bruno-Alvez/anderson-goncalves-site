@@ -129,6 +129,11 @@ export const Button = styled.button`
     background-color: #2563EB;
     cursor: pointer;
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `
 
 export const Error = styled.span`
@@ -147,4 +152,19 @@ export const RequiredInfo = styled.p`
   font-size: 0.9rem;
   margin-top: -1rem;
   font-style: italic;
+`
+
+export const Feedback = styled.p<{ status: 'success' | 'error' | 'loading' }>`
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: ${({ status }) =>
+    status === 'success' ? '#10B981' :
+    status === 'error' ? '#EF4444' :
+    '#3B82F6'};
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
 `

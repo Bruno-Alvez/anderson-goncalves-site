@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { FaWhatsapp, FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 const SocialDivider = () => {
   return (
@@ -11,9 +11,6 @@ const SocialDivider = () => {
         </S.IconLink>
         <S.IconLink href="https://www.instagram.com/goncalvespersonal_?igsh=MWx4dzA5cnJmdGd5Ng==" target="_blank" aria-label="Instagram">
           <FaInstagram />
-        </S.IconLink>
-        <S.IconLink href="https://facebook.com/seu_usuario" target="_blank" aria-label="Facebook">
-          <FaFacebook />
         </S.IconLink>
         <S.IconLink href="mailto:personalgoncalves11@gmail.com" target="_blank" aria-label="Email">
           <FaEnvelope />
